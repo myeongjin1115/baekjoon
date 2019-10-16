@@ -1,15 +1,16 @@
+// https://www.acmicpc.net/problem/2588
+
 #include <iostream>
 using namespace std;
 
 int main() {
-	int n1, n2;
+	int a, b;
 	
-	cin >> n1 >> n2;
-	
-	cout << n1 * (n2 % 10) << endl;
-	cout << n1 * ((n2 % 100) / 10) << endl;
-	cout << n1 * (n2 / 100) << endl;
-	cout << n1 * n2 << endl;
+	cin >> a >> b;
+	cout << a * (b % 10) << '\n';
+	cout << a * (b % 100 / 10) << '\n';
+	cout << a * (b / 100) << '\n';
+	cout << a * b << '\n';
 	
 	return 0;
 }

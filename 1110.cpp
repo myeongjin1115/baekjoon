@@ -1,19 +1,20 @@
+// https://www.acmicpc.net/problem/1110
+
 #include <iostream>
 using namespace std;
 
 int main() {
-	int inputNum, cycleNum;
-	int cycleLength = 0;
+	int n, cpN;
+	int count = 0;
 	
-	cin >> inputNum;
-	cycleNum = inputNum;
-	
+	cin >> n;
+	cpN = n;
 	do {
-		cycleNum = ((cycleNum / 10) + (cycleNum % 10)) % 10 + (cycleNum % 10) * 10;
-		cycleLength++;
-	} while (inputNum != cycleNum);
+		n = (n / 10 + (n % 10)) % 10 + (n % 10) * 10;
+		count++;
+	} while (cpN != n);
 	
-	cout << cycleLength << endl;
+	cout << count << '\n';
 	
 	return 0;
 }

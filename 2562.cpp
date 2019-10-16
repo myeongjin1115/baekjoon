@@ -1,24 +1,23 @@
+// https://www.acmicpc.net/problem/2562
+
 #include <iostream>
 using namespace std;
 
 int main() {
-	int arr[9];
-	int max, index;
+	int inputNum, max;
+	int index = 1;
 	
-	cin >> arr[0];
-	index = 1;
-	max = arr[index - 1];
-	
-	for (int i = 1; i < 9; i++) {
-		cin >> arr[i];
-		if (max < arr[i]) {
-			index = i + 1;
-			max = arr[index - 1];
+	cin >> inputNum;
+	max = inputNum;
+	for (int i = 2; i <= 9; i++) {
+		cin >> inputNum;
+		if (max < inputNum) {
+			max = inputNum;
+			index = i;
 		}
 	}
 	
-	cout << max << endl;
-	cout << index << endl;
+	cout << max << '\n' << index << '\n';
 	
 	return 0;
 }

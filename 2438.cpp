@@ -1,4 +1,4 @@
-// https://www.acmicpc.net/problem/2439
+// https://www.acmicpc.net/problem/2438
 
 #include <iostream>
 using namespace std;
@@ -8,10 +8,9 @@ int main() {
 	
 	cin >> n;
 	for (int i = 1; i <= n; i++) {
-		for (int j = n; j > 0; j--) {
-			if (j <= i) cout << '*';
-			else cout << ' ';
-		}
+		for (int j = 0; j < i; j++) cout << '*';
 		cout << '\n';
 	}
+	
+	return 0;
 }

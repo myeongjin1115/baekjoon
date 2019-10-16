@@ -1,21 +1,21 @@
+// https://www.acmicpc.net/problem/10818
+
 #include <iostream>
 using namespace std;
 
 int main() {
-	int n, inputNum, max, min;
+	int n, max, min, inputNum;
 	
 	cin >> n;
-	
 	cin >> inputNum;
 	max = min = inputNum;
-	
-	while(--n) {
+	for (int i = 1; i < n; i++) {
 		cin >> inputNum;
 		if (max < inputNum) max = inputNum;
-		if (min > inputNum) min = inputNum;
+		else if (min > inputNum) min = inputNum;
 	}
 	
-	cout << min << ' ' << max << endl;
+	cout << min << ' ' << max << '\n';
 	
 	return 0;
 }

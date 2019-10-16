@@ -1,22 +1,21 @@
+// https://www.acmicpc.net/problem/2753
+
 #include <iostream>
 using namespace std;
 
 int main() {
 	int year;
-	int flag = 0;
+	bool leap = false;
 	
 	cin >> year;
-	
-	if (year % 4 == 0) {
-		flag = 1;
-		if (year % 100 == 0) {
-			if (year % 400 == 0) flag = 1;
-			else flag = 0;
+	if (!(year % 4)) {
+		leap = 1;
+		if (!(year % 100)) {
+			leap = 0;
+			if (!(year % 400)) leap = 1;
 		}
 	}
-	
-	if (flag) cout << '1' << endl;
-	else cout << '0' << endl;
+	cout << leap << '\n';
 	
 	return 0;
 }
