@@ -33,6 +33,6 @@ int main() {
     }
 
     cout << n - max_num << endl;
-
+    
     return 0;
 }
